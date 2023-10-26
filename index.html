@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Guessmaster</title>
+	<link rel="stylesheet" type="text/css" href="guessit.css">
+	<script type="text/javascript" src="guessit.js" defer></script>
+</head>
+<body>
+  <div class="overlay"></div>
+<div class="originalGrid">
+  <div class="content">
+    <img src="../gmLogo.png">
+  <div class="Rules">
+    <h2 class="level">Level 1</h2>
+  	<h3>
+  		Rules
+  	</h3>
+  	<ul>
+  		<li class="range">Enter a number between 1 and 100 inclusive</li>
+  		<li class="maxim">Maximum of 8 trials</li>
+  	</ul> </div>
+  </div>
+  <content class="contents">
+    <div class="resultParas">
+      <h3 class="guesses"> Previous guesses: </h3>
+      <p class="lastResult"></p>
+      <p class="lowOrHigh"></p>
+    </div>
+
+    <label for="guessField"><b><em>Enter a guess: </em></b></label>
+    <input type="number" id="guessField" class="guessField" />
+    <div style="display: inline;">
+    	 <input type="submit" value="Submit guess" class="guessSubmit"/>
+  		 <input type="submit" value="Advance" class="advance" style="display:none" />
+  		 <input type="submit" value="Start again" class="startAgain" style="display:none" />
+  		 <input type="submit" value="Start over" class="startOver" style="display:none" />
+    </div>
+  </content>
+</div>
+<footer>
+    <h4>v1.0</h4>
+    <p>Connect with me on:
+      <span>
+        <a href="https://twitter.com/k3nn3ry" target="_blank"><img src="../icons8x.png"></a>
+      </span>
+      <span>
+        <a href="https://wa.me/2347067629669"><img src="../whatsapp.png"></a>
+      </span>
+    </p>
+    <div class="copyright"><b>&copy;</b>
+      <script>
+      document.write(new Date().getFullYear())
+      </script> by <mark class="devName">Kennery</mark>
+    </div>
+</footer>
+</body>
+</html>

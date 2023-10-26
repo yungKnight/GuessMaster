@@ -1,0 +1,177 @@
+body {
+  font-family: serif;
+	height: 100vh;
+	width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	background-image: url('../bg.png');
+	background-size: cover;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(5px) brightness(70%) contrast(150%);
+  pointer-events: none; 
+}
+
+.originalGrid {
+  display: grid;
+  grid-template-columns: 1fr; 
+  grid-template-rows: auto auto;
+  background-color: rgba(87, 22, 22, 0.3);
+  position: relative;
+  margin: 20%; 
+  max-width: 450px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px; 
+  align-items: center; 
+  max-width: inherit;
+  margin: auto; 
+}
+
+.Rules {
+  width: 200px;
+  padding-left: 20px;
+  color: rgba(218, 232, 234, 0.8);
+}
+
+.Rules ul {
+  list-style-type: square ;
+  padding: 0;
+}
+
+.Rules ul li {
+  margin-bottom: 8px;
+}
+
+.content, .contents {
+	padding: 10px;
+	background-color: rgba(55, 28, 37, 0.4);
+}
+
+.contents {
+	font-size: 15px;
+}
+
+.lastResult {
+  width: 230px;
+}
+
+.guessSubmit, .advance, .startAgain, .startOver {
+  background-color: #FF69B4; 
+  color: rgba(0, 0, 0, 1.0); 
+  text-transform: capitalize;
+  font-size: 13px; 
+  border-radius: 8px 3px; 
+  cursor: pointer;
+  margin: 0px 10px;
+  height: 1.8rem;
+}
+
+.startOver:hover {
+  translate: 2px -2px;
+  box-shadow: 2px 1px 4px 2px purple;
+  background: linear-gradient( rgba(156, 146, 105, 0.7)30%,  rgba(156, 106, 75, 0.7)70%) no-repeat;
+
+}
+
+.startAgain:hover {
+  background-color: red;
+}
+
+.advance:hover {
+  background-color: green;
+}
+
+.guessSubmit:hover {
+  background-color: #FF1493; 
+}
+
+footer {
+  z-index: 1000;
+  color: black;
+  margin: 0px;
+  display: grid;
+  grid-template-columns: 60px auto auto;
+  font-size: 14px;
+  margin: 25px;
+  text-align: center;
+  position: absolute;
+  bottom: 0%;
+  min-width: 450px;
+  max-width: 480px;
+   background-color: rgba(255, 255, 255, 0.15);
+   box-shadow: 3px 4px 10px 2px #000000; 
+ }
+
+footer a {
+  z-index: 2000;
+  font-size: 14px;
+  opacity: 0.65;
+  color: black;
+  display: inline-block;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: red;
+  font-size: 18px;
+}
+
+mark {
+  background: linear-gradient( rgba(156, 46, 135, 0.7),  rgba(156, 46, 135, 0.7)) no-repeat;
+  background-position: bottom;
+  background-size: 90% 55%;
+  cursor: zoom-in;
+}
+
+footer > p {
+  cursor: default;
+}
+
+.copyright {
+  display: block;
+  margin: auto;
+  text-align: center;
+  cursor: default;
+}
+
+.devName:hover {
+  background-size: 100%;
+  font-size: 18px;
+  text-shadow: 2px 3px 4px red, -2px 3px 4px blue;
+  text-decoration:  underline 2px;
+}
+
+h4 {
+  margin: auto;
+  display: block;
+  font-size: 1.2rem;
+  text-decoration: underline;
+  text-shadow: 1px 1px 4px hsla(12, 90%, 40%, 0.7);
+  cursor: progress;
+}
+
+footer p {
+  font-size: 16px;
+}
+
+a img {
+  max-height: 18px;
+  margin-left: 3px;
+}
+
+a img:hover {
+  background-color: rgba(256, 256, 256, 0.8);
+}
