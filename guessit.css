@@ -20,8 +20,9 @@ body {
   backdrop-filter: blur(5px) brightness(70%) contrast(150%);
   pointer-events: none; 
 }
-.guessfield:hover {
-	background-color: white;
+.guessField {
+background: rgba(256, 256, 256, 0.55);
+color: black;
 }
 .originalGrid {
   display: grid;
