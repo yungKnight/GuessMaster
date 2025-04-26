@@ -1,13 +1,13 @@
 body {
   font-family: serif;
-	height: 100vh;
-	width: 100%;
+  height: 100vh;
+  width: 100%;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-	background-image: url('./bgrep.png');
-	background-size: cover;
+  background-image: url('bgrep.png');
+  background-size: cover;
 }
 
 .overlay {
@@ -20,10 +20,7 @@ body {
   backdrop-filter: blur(5px) brightness(70%) contrast(150%);
   pointer-events: none; 
 }
-.guessField {
-background: rgba(256, 256, 256, 0.55);
-color: black;
-}
+
 .originalGrid {
   display: grid;
   grid-template-columns: 1fr; 
@@ -59,16 +56,21 @@ color: black;
 }
 
 .content, .contents {
-	padding: 10px;
-	background-color: rgba(55, 28, 37, 0.4);
+  padding: 10px;
+  background-color: rgba(55, 28, 37, 0.4);
 }
 
 .contents {
-	font-size: 15px;
+  font-size: 15px;
 }
 
 .lastResult {
   width: 230px;
+}
+
+.guessField {
+background: rgba(256, 256, 256, 0.55);
+color: black;
 }
 
 .guessSubmit, .advance, .startAgain, .startOver {
@@ -177,4 +179,44 @@ a img {
 
 a img:hover {
   background-color: rgba(256, 256, 256, 0.8);
+}
+
+@media only screen and (max-width: 460px) {
+  .content {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 5%;
+    min-width: 320px;
+  }
+
+  .Rules {
+    font-size: 14px;
+  }
+
+  .content img {
+   width: 100%; 
+   height: auto;
+   display: block;
+  }
+
+  .guessField {
+    max-width: 4em;
+  }
+
+  .guessSubmit {
+    value: 'Guess';
+  }
+
+  label, .guessField, .guessSubmit {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  footer {
+    min-width: 350px; 
+  }
+
+  .Rules {
+    word-wrap: wrap;
+  }
 }
